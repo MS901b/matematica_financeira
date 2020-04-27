@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso>
+    <titulo>Como comprar sua moto</titulo>
+    <descricao>Neste software, o estudante simulará a compra de uma moto. Para isso, primeiramente será preciso guardar dinheiro na poupança e, depois, esse valor será dado como entrada na compra da moto. O restante do preço será ﬁnanciado. Para facilitar os cálculos dessa aquisição, serão necessários alguns conceitos de Progressão Geométrica.</descricao>
+    <estado>finalizado</estado>
+    <imagem>img_launcher.png</imagem>
+    <tipo>software educacional</tipo>
+    <objetivos>Aplicar o conceito de juros compostos; Introduzir o conceito de empréstimo sob juros; Mostrar aplicações de progressão geométrica em matemática ﬁnanceira.</objetivos>
+    <observacoes>É necessário navegador moderno, plugin flash 9.0+ e plugin java 1.9+.</observacoes>
+    <nivel>Ensino Médio</nivel>
+    <componente>Matemática</componente>
+    <temas>Números e Função</temas>
+    <autores>Samuel Rocha de Oliveira, Leonardo Barichello</autores>
+    <palavras_chaves>Matemática financeira, Progressão Geométrica, Sequências, juros, juros compostos, dívida, compra, financiamento</palavras_chaves>
+    <assunto>Matemática financeira, Progressão Geométrica, Sequências</assunto>
+</recurso>
+
+
+

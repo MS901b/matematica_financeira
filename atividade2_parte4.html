@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml"  xml:lang = "pt-br"  lang = "pt-br">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen, projection" title="normal"/>
+		<link rel="alternate stylesheet"  type="text/css" href="css/estilo2.css" title="grande" />
+
+
+		<link rel="stylesheet" type="text/css" href="css/popup.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/notas.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/bloco.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="css/calculadora.css" media="screen, projection" />
+		<!--[if IE 7]>
+			<link rel="stylesheet" type="text/css" href="css/estilo_ie7.css" media="screen, projection" />
+		<![endif]-->
+		<!--[if lte IE 6]>
+			<link rel="stylesheet" type="text/css" href="css/estilo_ie6.css" media="screen, projection" />
+		<![endif]-->
+
+		<script type="text/javascript" src="scripts/AC_RunActiveContent.js"></script>
+		<script type="text/javascript" src="scripts/protoaculous.js"></script>
+		<script type="text/javascript" src="scripts/salvaLocal.js"></script>
+		<script type="text/javascript" src="scripts/popup.js"></script>
+		<script type="text/javascript" src="scripts/notas.js"></script>
+		<script type="text/javascript" src="scripts/bloco.js"></script>
+		<script type="text/javascript" src="scripts/calculadora.js"></script>
+		<script type="text/javascript" src="scripts/rolagem.js"></script>
+
+
+		<!-- O arquivo referencias.js e curiosidades.js devem ser incluídos depois do interface -->
+		<script type="text/javascript" src="scripts/interface.js"></script>
+		<script type="text/javascript" src="scripts_software/referencias.js"></script>
+		<script type="text/javascript" src="scripts_software/curiosidades.js"></script>
+
+		<!-- O arquivo exemplo_correcao.js que contem as funções que corrigem, deve ser incluido antes do exemplo_conteudo.js-->
+
+		<script type="text/javascript" src="scripts_software/atividade2_correcao.js"></script>
+		<script type="text/javascript" src="scripts_software/atividade2_conteudo.js"></script>
+		<script type="text/javascript" src="scripts_software/poligonos.js"></script>
+		<script type="text/javascript" src="scripts_software/procnumerico.js"></script>
+		<script type="text/javascript" src="scripts/inputs.js"></script>
+		<script type="text/javascript">
+
+			var PosicaoAtual = {Atividade: 2, Parte: 3};
+			var ProximaParte = 'mapa.html';
+
+
+
+			var Popups = $H({
+				link_continuar: {
+					conteudo: 'Você não pode continuar sem ter respondido todas as questões.',
+					layout: ['seta_baixo', 'direita'],
+					largura: 11
+				}
+			});
+
+			var Links = $H({
+			});
+
+			var Perguntas = $H({
+			});
+		</script>
+		<title>Como comprar sua moto</title>
+	</head>
+	<body onunload="">
+
+	<!--
+	Nunca crie um "onload" aqui, use a Classe Event do Prototype: Event.observe(window, 'load', funcaoAqui);
+	Veja um exemplo no arquivo exemplo_correcao.js
+	-->
+		<div id="container">
+			<div id="cabecalho">
+				<div id="onde_estou">
+					<div class="numero_atividade">2</div>
+					<h1>Como comprar sua moto</h1> <img src="img_layout/setinha-cabecalho.gif" alt=""/> <h2>O Financiamento</h2>
+				</div>
+				<div id="logo"></div>
+				<div id="links">
+					<a id="mapa" href="mapa.html">Mapa</a>
+					<a href="introducao.html">Introdução</a>
+					<a href="index.html">Início</a>
+				</div>
+
+				<div class="limpador"></div>
+			</div>
+			<ul id="partes">
+			</ul>
+			<div id="software">
+				<div id="conteudo">
+						<!-- SalvaLocal -->
+					<div class="salva_local">
+						
+					</div>
+					<div class="limpador"></div>
+					<div id="questoes">
+						<div id="texto_generico">
+							<p>Na primeira atividade, você decidiu juntar R$<span id="trans_1"></span> reais durante <span id="trans_2"></span> meses em uma poupança, resultando em
+							R$<span id="trans_3"></span> reais. Mas, como o banco paga 1% de rendimento por mês, no final deste período você havia acumulado R$<span id="trans_4"></span>.</p>
+							<p>Como o preço da moto era R$ 7.000,00, ainda faltaram R$ <span id="trans_5"></span> que, graças a uma ajuda da sua avó, foram pagos em parcelas
+							de R$<span id="trans_6"></span>.00 sobre as quais foram aplicados os juros que esse montante emprestado renderia caso ficasse depositado na poupança. O esquema adotado pela sua avó é muito semelhante ao que as lojas utilizam para financiar a aquisição de certos bens, mas os juros cobrados por estas são muito maiores.</p>
+							<p>Com isso, você gastou um total de R$<span id="trans_8"></span> reais para comprar a moto que custava, originalmente, R$ 7.000,00.</p>
+							<p>Verifique com outros grupos, que provavelmente escolheram opções diferentes de pagamento, quanto eles gastaram pra fazer a mesma compra. Discuta com seus colegas sobre qual parece ser a melhor maneira de se adquirir a moto.</p>
+							</div>
+						<a id="link_continuar">
+							<span class="escondido">Continuar</span>
+						</a>
+						<div class="limpador"></div>
+					</div>
+				</div>
+			</div>
+			<br class="limpador" />
+			<div id="rodape">
+				<a target="blank"; href="http://m3.ime.unicamp.br">Sobre o Matemática Multimídia</a>
+			</div>
+		</div>
+		<div id="applet">
+			<div id="borda_applet" class="altura_applet_3 borda sem_fundo">
+				<img src="imgs/apresentacao.jpg" alt=""/>
+				<div id="associacao"></div>
+			</div>
+		</div>
+
+
+
+		<div id="associado"></div>
+
+
+		<div id="ferramentas">
+			<a href="javascript:;" onclick="return false;" id="link_notas"><span class="escondido">referencias</span></a>
+			<a href="javascript:;" onclick="return false;" id="link_bloco"><span class="escondido">bloco de notas</span></a>
+			<!--<a href="javascript:;" id="link_calculadora" onclick="javascript:calculadora();"><span class="escondido">calculadora</span></a>
+			<a href="javascript:;" id="link_acessibilidade"><span class="escondido">acessibilidade</span></a>-->
+		</div>
+		<div id="calc" class="escondido"></div>
+
+
+	</body>
+</html>
