@@ -270,7 +270,7 @@ function ggbOnInit(){
 		if (applet.isDefined('G')){
 			applet.deleteObject('G');
 		}
-		applet.evalCommand("G = ("+aux+", (Elemento[lista"+M+","+N+"]))");
+		//applet.evalCommand("G = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 		applet.setVisible('G',false);
 		$('a1p4_Xreais').update(Number(applet.getYcoord("G").toFixed(2)));
 		setResp('valor_total', Number(applet.getYcoord("G").toFixed(2)));
@@ -417,7 +417,7 @@ if (applet.isDefined('E')){
 	applet.deleteObject('E');
 }
 
-applet.evalCommand("E = ("aux", y(Elemento[lista"M","N"]))");
+applet.evalCommand("E = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 applet.setLabelVisible('E',false);
 applet.setColor('E', 255, 0, 0);
 
@@ -438,7 +438,7 @@ var N = aux + 1;
 if (applet.isDefined('F')){
 	applet.deleteObject('F');
 }
-applet.evalCommand("F = ("aux", (Elemento[lista"M","N"]))");
+applet.evalCommand("F = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 applet.setLabelVisible('F',false);
 applet.setColor('F', 255, 0, 0);
 
