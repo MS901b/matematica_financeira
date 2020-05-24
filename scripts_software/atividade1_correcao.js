@@ -594,7 +594,7 @@ function corrige_q_5_a(valor)
 		var N = aux + 1;
 
 		if (!applet.isDefined("H")){
-			//applet.evalCommand("H = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+			applet.evalCommand("H = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 			applet.setVisible('H',false);
 		}
 		var resp_esperada = applet.getYcoord("H");
