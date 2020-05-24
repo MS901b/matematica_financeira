@@ -417,7 +417,7 @@ if (applet.isDefined('E')){
 	applet.deleteObject('E');
 }
 
-applet.evalCommand("E = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+//applet.evalCommand("E = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 applet.setLabelVisible('E',false);
 applet.setColor('E', 255, 0, 0);
 
@@ -438,7 +438,7 @@ var N = aux + 1;
 if (applet.isDefined('F')){
 	applet.deleteObject('F');
 }
-applet.evalCommand("F = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+//applet.evalCommand("F = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 applet.setLabelVisible('F',false);
 applet.setColor('F', 255, 0, 0);
 
@@ -459,7 +459,7 @@ var N = aux + 1;
 if (applet.isDefined('G')){
 	applet.deleteObject('G');
 }
-applet.evalCommand("G = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+//applet.evalCommand("G = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 applet.setLabelVisible('G',false);
 applet.setColor('G', 255, 0, 0);
 
@@ -594,7 +594,7 @@ function corrige_q_5_a(valor)
 		var N = aux + 1;
 
 		if (!applet.isDefined("H")){
-			applet.evalCommand("H = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+			//applet.evalCommand("H = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 			applet.setVisible('H',false);
 		}
 		var resp_esperada = applet.getYcoord("H");
