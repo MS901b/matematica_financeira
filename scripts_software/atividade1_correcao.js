@@ -417,7 +417,7 @@ if (applet.isDefined('E')){
 	applet.deleteObject('E');
 }
 
-applet.evalCommand("E = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+//applet.evalCommand("E = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
 applet.setLabelVisible('E',false);
 applet.setColor('E', 255, 0, 0);
 
