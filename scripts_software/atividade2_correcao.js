@@ -203,7 +203,7 @@ function exec_init(){
 					var total = (7000 - getResp('valor_total'));
 					var aux = Number(getResp('a1_valor')*getResp('a1_meses'));
 					aux += Number(total_pago);
-
+					aux = Number(aux).toFixed(2);
 
 					$('trans_8').update(aux);
 					permiteContinuar(true);
