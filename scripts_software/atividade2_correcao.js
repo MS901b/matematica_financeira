@@ -40,8 +40,8 @@ function exec_init(){
 							}
 						}
 					var total = getResp('valor_total');
-					$('a2p1t1').update(Number(7000-total).toFixed(2));
-					$('a2p1t3').update(Number(7000-total).toFixed(2));
+					$('a2p1t1').update(Number(10000-total).toFixed(2));
+					$('a2p1t3').update(Number(10000-total).toFixed(2));
 
 				}
 				Event.observe('parte1_q1_a', 'change', function(evento){
@@ -134,7 +134,7 @@ function exec_init(){
 					var esperada = getResp('a2_parte1_q1_a');
 
 					var total = getResp('valor_total');
-					$('a2_R2').update(Number(7000-total).toFixed(2));
+					$('a2_R2').update(Number(10000-total).toFixed(2));
 
 					$('a2_R3').update(getResp('a2_meses'));
 
@@ -191,16 +191,16 @@ function exec_init(){
 					var total_pago = getResp('total_pago');
 					total_pago = Number(total_pago).toFixed(2);
 					var M = getResp('a2_meses');
-					var a1 = Number(7000-Number(total1).toFixed(2)).toFixed(2)/getResp('a2_meses');
+					var a1 = Number(10000-Number(total1).toFixed(2)).toFixed(2)/getResp('a2_meses');
 					var total = a1*(1-Math.pow(1.02,M))/-0.02;
 					total = Number(total).toFixed(2);
 					$('trans_1').update(getResp('a1_valor'));
 					$('trans_2').update(getResp('a1_meses'));
 					$('trans_3').update(getResp('a1_valor')*getResp('a1_meses'));
 					$('trans_4').update(Number(total1).toFixed(2));
-					$('trans_5').update(Number(7000-Number(total1).toFixed(2)).toFixed(2));
+					$('trans_5').update(Number(10000-Number(total1).toFixed(2)).toFixed(2));
 					$('trans_6').update(getResp('a2_meses'));
-					var total = (7000 - getResp('valor_total'));
+					var total = (10000 - getResp('valor_total'));
 					var aux = Number(getResp('a1_valor')*getResp('a1_meses'));
 					aux += Number(total_pago);
 					aux = Number(aux).toFixed(2);
@@ -221,7 +221,7 @@ function ggbOnInit(){
 		var applet = document.ggbApplet;
 		if (flag)
 		{
-			var total = (7000 - getResp('valor_total'));
+			var total = (10000 - getResp('valor_total'));
 			applet.setValue('m',total);
 			applet.setValue('p',getResp('a2_meses'));
 			var esperada = applet.getValue('m')/applet.getValue('p');
@@ -234,7 +234,7 @@ function ggbOnInit(){
 	if (PosicaoAtual.Parte == 2){
 		var applet = document.ggbApplet;
 		if (flag){
-			var total = (7000 - getResp('valor_total'));
+			var total = (10000 - getResp('valor_total'));
 			$('valor_emprestado').update(total);
 			applet.setValue('m', total);
 			applet.setValue('p',getResp('a2_meses'));
@@ -334,7 +334,7 @@ function corrige_q_1_a(valor)
 	//valor01 = processaExpressao(valor[0]);
 	var applet = document.ggbApplet;
 	var total = getResp('valor_total');
-	var esperada = Number(Number(7000-total).toFixed(2)/getResp('a2_meses')).toFixed(2);
+	var esperada = Number(Number(10000-total).toFixed(2)/getResp('a2_meses')).toFixed(2);
 	esperada = Math.ceil(esperada);
 	eval("resposta = Math.pow((" + valor[0] + "-" + esperada+"),2)");
 	var resp = false;
@@ -363,7 +363,7 @@ function corrige_q_2_a(valor)
 	applet.evalCommand('valor = f(1)');
 	var esperada = applet.getValue('valor');
 
-	var esperada = (7000 - getResp('valor_total') - getResp('a2_meses'));
+	var esperada = (10000 - getResp('valor_total') - getResp('a2_meses'));
 	eval("resposta = Math.pow((" + valor[0] + "-" + esperada+"),2)");
 	var resp = false;
 	if (resposta <= 0.1){
@@ -591,7 +591,7 @@ function corrige_q_6_a(valor)
 
 	var applet = document.ggbApplet;
 	var total = getResp('valor_total');
-	total = Number(7000-total).toFixed(2);
+	total = Number(10000-total).toFixed(2);
 
 	var parcelas_inteiras = Number(Math.floor(applet.getXcoord('A')));
 	//parcelas_inteiras = parcelas_inteiras - 1;
@@ -639,7 +639,7 @@ function set_inicial(){
 		location.reload();
 	}
 
-	setResp('a2_valor', Number(7000-total).toFixed(2));
+	setResp('a2_valor', Number(10000-total).toFixed(2));
 	atualiza_Bloco();
 	$('meu_select_2').trava();
 }
