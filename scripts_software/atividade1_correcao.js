@@ -267,10 +267,13 @@ function ggbOnInit(){
 		var M = Number(getResp('a1_meses'));
 		var aux = M;
 		var N = aux + 1;
+		var D = Number(getResp('a1_valor'));
+		var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
+
 		if (applet.isDefined('G')){
 			applet.deleteObject('G');
 		}
-		applet.evalCommand("G = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+		applet.evalCommand("G = ("+aux+", "+S+")");
 		applet.setVisible('G',false);
 		$('a1p4_Xreais').update(Number(applet.getYcoord("G").toFixed(2)));
 		setResp('valor_total', Number(applet.getYcoord("G").toFixed(2)));
@@ -412,12 +415,14 @@ var applet = document.ggbApplet;
 var M = Number(getResp('a1_meses'));
 var aux = M/3;
 var N = aux + 1;
+var D = Number(getResp('a1_valor'));
+var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
 
 if (applet.isDefined('E')){
 	applet.deleteObject('E');
 }
 
-applet.evalCommand("E = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+applet.evalCommand("E = ("+aux+", "+S+")");
 applet.setLabelVisible('E',false);
 applet.setColor('E', 255, 0, 0);
 
@@ -435,10 +440,13 @@ var applet = document.ggbApplet;
 var M = Number(getResp('a1_meses'));
 var aux = M/2;
 var N = aux + 1;
+var D = Number(getResp('a1_valor'));
+var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
+
 if (applet.isDefined('F')){
 	applet.deleteObject('F');
 }
-applet.evalCommand("F = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+applet.evalCommand("F = ("+aux+", "+S+")");
 applet.setLabelVisible('F',false);
 applet.setColor('F', 255, 0, 0);
 
@@ -456,10 +464,13 @@ var applet = document.ggbApplet;
 var M = Number(getResp('a1_meses'));
 var aux = M;
 var N = aux + 1;
+var D = Number(getResp('a1_valor'));
+var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
+
 if (applet.isDefined('G')){
 	applet.deleteObject('G');
 }
-applet.evalCommand("G = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+applet.evalCommand("G = ("+aux+", "+S+")");
 applet.setLabelVisible('G',false);
 applet.setColor('G', 255, 0, 0);
 
@@ -592,9 +603,11 @@ function corrige_q_5_a(valor)
 		var M = Number(getResp('a1_meses'));
 		var aux = M/3;
 		var N = aux + 1;
+		var D = Number(getResp('a1_valor'));
+		var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
 
 		if (!applet.isDefined("H")){
-			applet.evalCommand("H = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+			applet.evalCommand("H = ("+aux+", "+S+")");
 			applet.setVisible('H',false);
 		}
 		var resp_esperada = applet.getYcoord("H");
@@ -625,9 +638,11 @@ function corrige_q_5_b(valor)
 		var M = Number(getResp('a1_meses'));
 		var aux = M/2;
 		var N = aux + 1;
+		var D = Number(getResp('a1_valor'));
+		var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
 
 		if (!applet.isDefined("I")){
-			applet.evalCommand("I = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+			applet.evalCommand("I = ("+aux+", "+S+")");
 			applet.setVisible('I',false);
 		}
 		var resp_esperada = applet.getYcoord("I");
@@ -657,9 +672,11 @@ function corrige_q_5_c(valor)
 		var M = Number(getResp('a1_meses'));
 		var aux = M;
 		var N = aux + 1;
+		var D = Number(getResp('a1_valor'));
+		var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
 
 		if (!applet.isDefined("J")){
-			applet.evalCommand("J = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+			applet.evalCommand("J = ("+aux+", "+S+")");
 			applet.setVisible('J',false);
 		}
 		var resp_esperada = applet.getYcoord("J");
@@ -710,8 +727,11 @@ function corrige_q_6_a(valor)
 		var M = Number(getResp('a1_meses'));
 		var aux = M;
 		var N = aux + 1;
+		var D = Number(getResp('a1_valor'));
+		var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
+
 		if (!applet.isDefined("K")){
-			applet.evalCommand("K = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+			applet.evalCommand("K = ("+aux+", "+S+")");
 			applet.setVisible('K',false);
 		}
 		var resp_esperada = (Number(applet.getYcoord("K")) - Number(getResp('a1_valor')*M));
@@ -745,8 +765,11 @@ function corrige_q_6_b(valor)
 	var M = Number(getResp('a1_meses'));
 	var aux = M;
 	var N = aux + 1;
+	var D = Number(getResp('a1_valor'));
+	var S = [D * (1 - Math.pow(1.01, aux))] / (1 - 1.01);
+
 	if (!applet.isDefined("K")){
-		applet.evalCommand("K = ("+aux+", y(Elemento[lista"+M+","+N+"]))");
+		applet.evalCommand("K = ("+aux+", "+S+")");
 		applet.setVisible('K',false);
 	}
 	var resp_esperada = (Number(applet.getYcoord("K"))/Number(getResp('a1_valor')*M));
