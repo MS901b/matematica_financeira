@@ -105,7 +105,7 @@ sub, sup {font-size: 10px;}
 	right: 10px;
 	bottom: 10px;
 	z-index: 150;
-	background-color: #FFF;
+	background-color: black; /*#FFF*/
 }
 
 #patrocinio
