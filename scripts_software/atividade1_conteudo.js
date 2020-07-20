@@ -1,5 +1,5 @@
 /*
-	Padronização do ID: 
+	Padronização do ID:
 		- [['p/parte','q/questao','/item'],'_'] vai gerar um id do tipo p1_q2_1
 		- [['p/parte','q/questao','/itemletra'],'_'] vai gerar um id do tipo p1_q2_a
 	Palavras-chave: questao, parte, item, itemletra, subitem
@@ -12,21 +12,21 @@ var IdPadrao = [['parte/parte','q/questao','/itemletra','/subitem'],'_'];
 
 /*
 	Questoes
-	
+
 	Aqui ficam concentrados todos os conteudos das questões da atividade!
 	Veja que está separado por Parte/Questão/Item
-	
+
 	ATENÇÃO: Cada tipo possui um formato de entrada característico.
 */
 
-var Questoes = 
+var Questoes =
 [
 	{
 	},
 	{
 		parte2_q1: //Questão 1
 		{
-			itens: 
+			itens:
 			[
 				{//A
 					enunciado: 'Uma vez que os juros são de 1% ao mês, quanto terá sido acumulado na poupança no início do segundo mês?',
@@ -40,10 +40,10 @@ var Questoes =
 		},
 		parte2_q2: //Questão 2
 		{
-			itens: 
+			itens:
 			[
 				{//A
-					enunciado: 'Qual é o valor total acumulado no início do terceiro mês?',			
+					enunciado: 'Qual é o valor total acumulado no início do terceiro mês?',
 					tipo: 'input',
 					selecionada: seleciona_q_2_a,
 					corrigir: corrige_q_2_a,
@@ -56,10 +56,10 @@ var Questoes =
 	{
 		parte3_q3: //Questão 3
 		{
-			itens: 
+			itens:
 			[
 				{//A
-					enunciado: 'Seguindo o padrão dos casos acima, qual seria o valor acumulado no início do 4º mês?',			
+					enunciado: 'Seguindo o padrão dos casos acima, qual seria o valor acumulado no início do 4º mês?',
 					tipo: 'multipla_escolha',
 					corrigir: corrige_q_3_a,
 					selecionada: seleciona_q_3_a,
@@ -70,14 +70,14 @@ var Questoes =
 						{value: '1', label: 'R$<span id="a1p3q3d"></span>'},
 						{value: '0', label: 'R$<span id="a1p3q3e"></span>'}
 					],
-					msgErro: 'Perceba que o valor obtido em cada mês é a soma daquilo que havia no mês anterior com a nova parcela, depositada no mês corrente.'
+					msgErro: 'Perceba que o valor obtido em cada mês é a soma daquilo que havia no mês anterior, multiplicado por 1,01, com a nova parcela, depositada no mês corrente.'
 				}
 			]
 		},
 		parte3_q4: //Questão 4
 		{
-			enunciadoGeral: 'Perceba que, para saber o total acumulado em cada mês, basta saber o primeiro termo e a razão dessa P. G.. Com base nisso, responda:',			
-			itens: 
+			enunciadoGeral: 'Perceba que, para saber o total acumulado em cada mês, basta saber o primeiro termo e a razão dessa P. G.. Com base nisso, responda:',
+			itens:
 			[
 				{//A
 					tipo: 'input',
@@ -104,24 +104,24 @@ var Questoes =
 		parte4_q5: //Questão 5
 		{
 			enunciadoGeral: 'Verifique qual será o total acumulado no banco em cada um dos seguintes meses:',
-			itens: 
+			itens:
 			[
 				{//A
-					enunciado: '<span id="a1p4q5a"></span>º mês',			
+					enunciado: '<span id="a1p4q5a"></span>º mês',
 					tipo: 'input',
 					corrigir: corrige_q_5_a,
 					selecionada: seleciona_q_5_a,
 					msgErro: 'Para saber o total acumulado no início de cada mês, basta posicionar, sobre o mês correspondente, o ponto que está no eixo das abscissas.'
 				},
 				{//B
-					enunciado: '<span id="a1p4q5b"></span>º mês',			
+					enunciado: '<span id="a1p4q5b"></span>º mês',
 					tipo: 'input',
 					corrigir: corrige_q_5_b,
 					selecionada: seleciona_q_5_b,
 					msgErro: 'Para saber o total acumulado no início de cada mês, basta posicionar, sobre o mês correspondente, o ponto que está no eixo das abscissas.'
 				},
 				{//C
-					enunciado: '<span id="a1p4q5c"></span>º mês',			
+					enunciado: '<span id="a1p4q5c"></span>º mês',
 					tipo: 'input',
 					corrigir: corrige_q_5_c,
 					selecionada: seleciona_q_5_c,
@@ -133,17 +133,17 @@ var Questoes =
 	{
 		parte5_q6: //Questão 6
 		{
-			itens: 
+			itens:
 			[
 				{//A
-					enunciado: 'Qual é a diferença, em dinheiro, entre o total acumulado na poupança e o total acumulado em casa no último mês?',			
+					enunciado: 'Qual é a diferença, em dinheiro, entre o total acumulado na poupança e o total acumulado em casa no último mês?',
 					tipo: 'input',
 					corrigir: corrige_q_6_a,
 					depois: '&nbsp; = <span id="parte1_q7_a_resp"></span>',
 					msgErro: 'Movimente o ponto azul do gráfico para observar os valores acumulados nos respectivos meses.'
 				},
 				{//B
-					enunciado: 'Qual é a razão entre o valor acumulado no último mês na poupança e o acumulado no último mês em casa?',			
+					enunciado: 'Qual é a razão entre o valor acumulado no último mês na poupança e o acumulado no último mês em casa?',
 					tipo: 'input',
 					corrigir: corrige_q_6_b,
 					msgAjuda: 'A razão entre a e b é o mesmo que a divisão a/b.',
