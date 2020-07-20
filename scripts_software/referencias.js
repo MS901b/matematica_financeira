@@ -1,9 +1,9 @@
 /*
-				
+
 	Referências bibliográficas:
-	
+
 	Esse conteúdo aparecerá no popup de Referencias, paginado de acordo com a ordem no array.
-	
+
 */
 
 
@@ -42,7 +42,7 @@ var Referencias = new Array(
 	{
 		titulo: 'RPM',
 		texto: [
-			'O número 66 da Revista do Professor de Matemática possui um artigo com o título "Calcular prestações de uma dívida, como?", de Guilhermo Zamalloa Torres que trata das diversas maneiras com que se calculam os juros e as prestações de um financiamento. Para conhecê-las, consulte esse artigo.'
+			'O número 66 da Revista do Professor de Matemática possui um artigo com o título "Calcular prestações de uma dívida, como?", de Guilhermo Zamalloa Torres que trata das diversas maneiras com que se calculam os juros e as prestações de um financiamento. Para conhecê-las, consulte esse <a href="http://www.rpm.org.br/cdrpm/66/3.html">artigo</a>.'
 		]
 	}
 );
