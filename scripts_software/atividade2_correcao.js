@@ -247,7 +247,7 @@ function ggbOnInit(){
 			applet.setValue('n', esperada);
 
 			zoomX = applet.getValue('zoomX')
-			applet.setCoordSystem('-3', zoomX, '-500', '7000');
+			applet.setCoordSystem('-3', zoomX+2, '-500', '9000');
 
 			var span1 = Number(total/getResp('a2_meses')).toFixed(2);
 			span1 = Math.ceil(span1);
